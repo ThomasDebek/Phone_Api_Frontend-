@@ -1,0 +1,16 @@
+<h1>Phones List</h1>
+
+<% if @phones.any? %>
+  <ul>
+    <% @phones.each do |phone| %>
+      <li>
+        <strong><%= phone["name"] %></strong><br>
+        <em><%= phone["description"] %></em><br>
+        💵 Price: $<%= phone["price"] %>
+      </li>
+      <hr>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No phones found.</p>
+<% end %>
